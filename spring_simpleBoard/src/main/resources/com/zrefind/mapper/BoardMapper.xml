@@ -31,4 +31,9 @@
 		where articleNo = #{articleNo}
 	</select>
 	
+	<delete id="delete">
+		delete t_board
+		where articleNo = #{articleNo}
+	</delete>
+	
 </mapper>

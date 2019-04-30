@@ -13,5 +13,7 @@ public interface BoardMapper {
 	public void insertSelectKey(ArticleVO article);
 	
 	public ArticleVO read(Long articleNo);
+	
+	public int delete(Long articleNo);
 
 }

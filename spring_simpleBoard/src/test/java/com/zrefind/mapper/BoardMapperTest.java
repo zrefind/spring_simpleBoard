@@ -46,10 +46,17 @@ public class BoardMapperTest {
 //		log.info(article);
 //	}
 	
+//	@Test
+//	public void test_read() {
+//		ArticleVO article = mapper.read(11L);
+//		log.info(article);
+//	}
+	
 	@Test
-	public void test_read() {
-		ArticleVO article = mapper.read(11L);
-		log.info(article);
+	public void test_delete() {
+		log.info("------------------------");
+		log.info("DELETE COUNT: " + mapper.delete(10L));
+		log.info("------------------------");
 	}
 
 }
