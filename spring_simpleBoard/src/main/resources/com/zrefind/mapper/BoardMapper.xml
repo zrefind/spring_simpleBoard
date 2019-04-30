@@ -25,4 +25,10 @@
 		values(#{articleNo}, #{title}, #{content}, #{writer})
 	</insert>
 	
+	<select id="read" resultType="com.zrefind.domain.ArticleVO">
+		select *
+		from t_board
+		where articleNo = #{articleNo}
+	</select>
+	
 </mapper>

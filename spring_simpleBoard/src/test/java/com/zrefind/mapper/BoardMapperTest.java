@@ -35,14 +35,20 @@ public class BoardMapperTest {
 //		log.info(article);
 //	}
 	
+//	@Test
+//	public void test_insertSelectKey() {
+//		ArticleVO article = new ArticleVO();
+//		article.setTitle("Lannister always pays his debts");
+//		article.setContent("it is true");
+//		article.setWriter("House Lannister");
+//		
+//		mapper.insertSelectKey(article);
+//		log.info(article);
+//	}
+	
 	@Test
-	public void test_insertSelectKey() {
-		ArticleVO article = new ArticleVO();
-		article.setTitle("Lannister always pays his debts");
-		article.setContent("it is true");
-		article.setWriter("House Lannister");
-		
-		mapper.insertSelectKey(article);
+	public void test_read() {
+		ArticleVO article = mapper.read(11L);
 		log.info(article);
 	}
 

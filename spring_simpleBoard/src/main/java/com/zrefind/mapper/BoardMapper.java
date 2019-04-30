@@ -11,5 +11,7 @@ public interface BoardMapper {
 	public void insert(ArticleVO article);
 	
 	public void insertSelectKey(ArticleVO article);
+	
+	public ArticleVO read(Long articleNo);
 
 }
