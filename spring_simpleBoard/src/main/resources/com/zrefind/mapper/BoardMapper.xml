@@ -11,4 +11,18 @@
 		]]>
 	</select>
 	
+	<insert id="insert">
+		insert into t_board(articleNo, title, content, writer)
+		values(seq_article.nextval, #{title}, #{content}, #{writer})
+	</insert>
+	
+	<insert id="insertSelectKey">
+		<selectKey keyProperty="articleNo" order="BEFORE" resultType="long">
+			select seq_article.nextval
+			from dual
+		</selectKey>
+		insert into t_board(articleNo, title, content, writer)
+		values(#{articleNo}, #{title}, #{content}, #{writer})
+	</insert>
+	
 </mapper>

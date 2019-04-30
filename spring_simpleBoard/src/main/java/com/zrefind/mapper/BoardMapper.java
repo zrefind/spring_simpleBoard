@@ -7,5 +7,9 @@ import com.zrefind.domain.ArticleVO;
 public interface BoardMapper {
 	
 	public List<ArticleVO> getList();
+	
+	public void insert(ArticleVO article);
+	
+	public void insertSelectKey(ArticleVO article);
 
 }
