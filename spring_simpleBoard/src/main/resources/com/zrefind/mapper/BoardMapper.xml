@@ -36,4 +36,13 @@
 		where articleNo = #{articleNo}
 	</delete>
 	
+	<update id="update">
+		update t_board
+		set title = #{title},
+			content = #{content},
+			writer = #{writer},
+			updatedate = sysdate
+		where articleNo = #{articleNo}
+	</update>
+	
 </mapper>

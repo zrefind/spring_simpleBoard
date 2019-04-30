@@ -15,5 +15,7 @@ public interface BoardMapper {
 	public ArticleVO read(Long articleNo);
 	
 	public int delete(Long articleNo);
+	
+	public int update(ArticleVO article);
 
 }

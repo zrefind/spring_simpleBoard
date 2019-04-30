@@ -52,11 +52,22 @@ public class BoardMapperTest {
 //		log.info(article);
 //	}
 	
+//	@Test
+//	public void test_delete() {
+//		log.info("------------------------");
+//		log.info("DELETE COUNT: " + mapper.delete(10L));
+//		log.info("------------------------");
+//	}
+	
 	@Test
-	public void test_delete() {
-		log.info("------------------------");
-		log.info("DELETE COUNT: " + mapper.delete(10L));
-		log.info("------------------------");
+	public void test_update() {
+		ArticleVO article = mapper.read(9L);
+		article.setTitle("Humble");
+		article.setContent("Be humble!");
+		article.setWriter("Kendrick Lamar");
+		
+		int count = mapper.update(article);
+		log.info("UPDATE COUNT: " + count);
 	}
 
 }
